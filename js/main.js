@@ -1,6 +1,52 @@
 $(document).ready(function() {
 	new WOW().init();
+	
+	try {	
+	  $('.productslider__slider').slick({
+        infinite: true,
+        slidesToShow: 5,
+        slidesToScroll: 5,
+      /* autoplay: true,
+        autoplaySpeed: 3000,*/
+        arrows: true,
+        dots: false,
+       /* dotsClass: 'mainslider__dots_slick',*/
+	   responsive: [
+	    {
+		  breakpoint: 1280,
+		  settings: {
+			slidesToShow: 4,
+			slidesToScroll: 4,
+
+		  }
+		},
+		{
+		  breakpoint: 768,
+		  settings: {
+			slidesToShow: 2,
+			slidesToScroll: 2,
+
+		  }
+		}]
+    });
+	
+	} catch(err) {
+	
+	}
+	
+	$(".productslider__right").click(function(e) { 
+		$(this).parent().parent().find(".slick-slider").slick("slickNext"); 
+	});
+	
+		$(".productslider__left").click(function(e) { 
+		$(this).parent().parent().find(".slick-slider").slick("slickPrev"); 
+	});
+	
+	
     $("input[type=tel]").mask("+7 (999) 999-99-99");
+	
+	
+	
 	
 	if ($(window).width() > 991) {
 		$(window).scroll(function() {
