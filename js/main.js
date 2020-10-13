@@ -5,8 +5,16 @@ $(document).ready(function() {
 	if ($(window).width() > 991) {
 		$(window).scroll(function() {
 			scroll = $(window).scrollTop();
-			if (scroll >= 700) $('#header').addClass('fixed');
-			else $('#header').removeClass('fixed');
+			if (scroll >= 700)  {
+				$('#header').addClass('fixed');
+				$('#header.fixed .header__menu').hide();
+			}
+			else 
+			{
+				$('#header').removeClass('fixed');
+				$('.header__menu').show();
+				$('#header.fixed .header__menu').hide();
+			}
 		});
 	}
 		
@@ -38,5 +46,43 @@ $(function() {
     $('.closemenu').click(function(event) {
         $('.menumobile').toggleClass('active');
         $('.mainmenu').slideToggle();
+    }); 
+	$('.menufixed').click(function(event) {
+        $('.header__menu').slideToggle();
     });
+});
+
+
+function incrementValue(e) {
+  e.preventDefault();
+  var fieldName = $(e.target).data('field');
+  var parent = $(e.target).closest('div');
+  var currentVal = parseInt(parent.find('input[name=' + fieldName + ']').val(), 10);
+
+  if (!isNaN(currentVal)) {
+    parent.find('input[name=' + fieldName + ']').val(currentVal + 1);
+  } else {
+    parent.find('input[name=' + fieldName + ']').val(0);
+  }
+}
+
+function decrementValue(e) {
+  e.preventDefault();
+  var fieldName = $(e.target).data('field');
+  var parent = $(e.target).closest('div');
+  var currentVal = parseInt(parent.find('input[name=' + fieldName + ']').val(), 10);
+
+  if (!isNaN(currentVal) && currentVal > 0) {
+    parent.find('input[name=' + fieldName + ']').val(currentVal - 1);
+  } else {
+    parent.find('input[name=' + fieldName + ']').val(0);
+  }
+}
+
+$('.quantity').on('click', '.quantity-plus', function(e) {
+  incrementValue(e);
+});
+
+$('.quantity').on('click', '.quantity-minus', function(e) {
+  decrementValue(e);
 });
