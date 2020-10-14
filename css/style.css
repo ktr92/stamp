@@ -1418,11 +1418,10 @@ input.quantity-minus {
 .btn_green {
 	background: #20bf55;
 	border-radius: 5px;
-	width: 124px;
+	padding: 0 30px;
 	height: 42px;
 	line-height: 42px;
 	text-align: center;
-	padding: 0;
 	color: #fff;
 	font-weight: 300;
 	font-size: 13px;
@@ -1432,7 +1431,10 @@ input.quantity-minus {
 	background: #38cc69;
 	color: #fff;	
 }
-
+.productitem__button .btn_green {
+	width: 124px;
+	padding: 0;
+}
 .btn_border {
 	background: #fff;
 	border-radius: 5px;
@@ -1589,6 +1591,249 @@ input.quantity-minus {
 .how__item_3 .how__content {
 	max-width: 260px;
 }
+
+.mapblock {
+	padding: 35px 0 0 0;
+}
+  
+.numblist  ol {
+	padding:0;
+  counter-reset: my-awesome-counter;
+  list-style: none;
+ 
+}
+.numblist  ol li {
+  margin: 0 0 0.5rem 0;
+  counter-increment: my-awesome-counter;
+  position: relative;
+   padding-left: 35px;
+   padding-bottom: 15px;
+}
+.numblist  ol li::before {
+  content: counter(my-awesome-counter);
+
+  
+  
+  	position: absolute;
+	top: 0px;
+	left: 0;
+	width: 27px;
+	height: 27px;
+	background: #0077cc;
+
+	font-size: 15px;
+	color: #fff;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 27px;
+}
+
+.mapblock {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+}
+
+.mapblock__left {
+	width: calc(100% - 900px);
+	padding-top: 20px;
+}
+.mapblock__left li a{
+	color: #000;
+	text-decoration: underline;
+}
+.mapblock__left li a:hover{
+	color: #000;
+	text-decoration: none;
+}
+
+.mapblock__right {
+	width: 100%;
+	max-width: 900px;
+	text-align: right;
+}
+
+.payments__title {
+  font-size: 15px;
+  font-weight: bold;
+	
+}
+
+.payments__text {
+  font-size: 13px;
+  line-height: 1.2;
+  color: #666666;
+}
+.payments__items {
+display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 30px 0;
+}
+
+.payments__content {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	padding-left: 20px;
+}
+
+.payments__info {
+	padding-left: 15px;
+}
+
+.payments__item {
+	width: 25%;
+	padding: 0 15px;
+}
+
+.payments__content {
+	height: 107px;
+	    box-shadow: 0 3px 16px -4px #b5b5b5;
+}
+
+
+.newslist__title {
+  font-size: 15px;
+  font-weight: bold;
+	padding-bottom: 10px;
+	line-height: 1.1;
+}
+
+.newslist__text {
+  font-size: 13px;
+  line-height: 1.2;
+   color: #666666;
+}
+.newslist__image {
+	width: 115px;
+	height: 115px;
+	border-radius: 50%;
+	overflow: hidden;
+	    display: inline-table;
+}
+
+.newslist__image img {
+    max-height: 100%;
+    height: 100%;
+    max-width: initial;
+}
+
+.newslist__items {
+display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 30px 0;
+}
+
+.newslist__item {
+	width: 33.333%;
+	padding: 0 10px;
+	
+}
+
+.newslist__content {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	padding: 20px;
+	border: 1px solid #cecece;
+}
+
+.newslist__info {
+	padding-left: 30px;
+}
+
+
+.footer__title, .footer__title a {
+  font-size: 15px; 
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 7px 0;
+ 
+}
+
+.footer__link  {
+	padding: 3px 0;
+}
+
+.footer__link a {
+  font-size: 13px;
+  color: rgb(255, 255, 255);
+
+}
+.footer__tel a{
+  font-size: 15px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  text-transform: uppercase;
+  
+}
+.footer__text {
+  font-size: 13px;
+  color: rgb(255, 255, 255);
+  
+}
+.footer__main {
+	background: #0077cc;
+	padding: 40px 0 40px 0;
+}
+
+.footer__items {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	
+}
+
+.footer__text {
+	padding: 5px 0;
+}
+
+.footer__socials {
+	padding: 9px 0;
+}
+
+.footerinfo__link {
+  font-size: 13px;
+  color: rgb(255, 255, 255);
+  opacity: 0.75;
+  font-weight: 300;
+  display: block;
+
+}
+.footerinfo__link a {
+  font-size: 13px;
+  color: rgb(255, 255, 255);
+  font-weight: 300;
+  display: block;
+
+}
+
+.footerinfo__link {
+	opacity: 0.;
+}
+.footerinfo__link a:hover {
+  font-size: 13px;
+  color: rgb(255, 255, 255);
+  opacity: 1;
+
+}
+
+.footerinfo__items {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	
+}
+
+.footer__bottom {
+	background: #006ab6;
+	padding: 15px 0;
+}
+
+
 
 @media (max-width: 1279px) {
 	.mainmenu nav > ul > li > a {
