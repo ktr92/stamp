@@ -96,6 +96,13 @@ $(function() {
 	$('.menufixed').click(function(event) {
         $('.header__menu').slideToggle();
     });
+	
+	$('.mainmenu ul > li .fa-angle-down').click(function(e) {
+		if ($(window).width() < 1024) {
+			e.preventDefault();		
+			$(this).parent().parent().find('.mainmenu__child').stop(true, true).slideToggle(250).end().siblings().find('.mainmenu__child').slideUp(250);
+		}
+	});
 });
 
 
