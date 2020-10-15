@@ -45,8 +45,31 @@ $(document).ready(function() {
 	
     $("input[type=tel]").mask("+7 (999) 999-99-99");
 	
-	
-	
+		if ($(window).width() < 1023) {
+			
+				
+					$('.indexblock .text p').append('<span class="readmorespan">Читать далее <i class="fa fa-angle-down" aria-hidden="true"></i></span>');
+				/* 	$('.indexblock .text p').append('<span class="readmorespan_hide">РЎРєСЂС‹С‚СЊ</span>');
+					$('.readmorespan_hide').hide() */
+				
+		
+			$('.readmorespan').on('click', function() {
+				$(this).parents('.indexblock .text p').css({
+					'height': 'initial',
+					'padding-bottom': '20px'
+				});
+				$(this).hide();
+				
+			});
+			/* $('.readmorespan_hide').on('click', function() {
+				$(this).parents('.list-of-products__item-description').css({
+					'height': '135px',
+					'padding-bottom': '0'
+				});
+				$(this).hide();
+				$(this).siblings($('.readmorespan')).show()
+			}); */
+				};
 	
 	if ($(window).width() > 991) {
 		$(window).scroll(function() {
@@ -90,11 +113,13 @@ $(function() {
         $('.mainmenu').slideToggle();
     });
     $('.closemenu').click(function(event) {
-        $('.menumobile').toggleClass('active');
-        $('.mainmenu').slideToggle();
+        $('.topmenu').slideToggle();
     }); 
 	$('.menufixed').click(function(event) {
         $('.header__menu').slideToggle();
+    });
+	$('.topmenumobile').click(function(event) {
+        $('.topmenu').slideToggle();
     });
 	
 	$('.mainmenu ul > li .fa-angle-down').click(function(e) {
