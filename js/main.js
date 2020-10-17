@@ -2,7 +2,8 @@ $(document).ready(function() {
 	new WOW().init();
 	
 	try {	
-	  $('.productslider__slider').slick({
+	  $('.productslider__slider').each(function() {
+		  $(this).slick({
         infinite: true,
         slidesToShow: 5,
         slidesToScroll: 5,
@@ -29,7 +30,7 @@ $(document).ready(function() {
 		  }
 		}]
     });
-	
+	 });
 	} catch(err) {
 	
 	}
@@ -48,13 +49,13 @@ $(document).ready(function() {
 		if ($(window).width() < 1023) {
 			
 				
-					$('.indexblock .text p').append('<span class="readmorespan">Читать далее <i class="fa fa-angle-down" aria-hidden="true"></i></span>');
+					$('.indextext').append('<span class="readmorespan">Читать далее <i class="fa fa-angle-down" aria-hidden="true"></i></span>');
 				/* 	$('.indexblock .text p').append('<span class="readmorespan_hide">РЎРєСЂС‹С‚СЊ</span>');
 					$('.readmorespan_hide').hide() */
 				
 		
 			$('.readmorespan').on('click', function() {
-				$(this).parents('.indexblock .text p').css({
+				$(this).siblings('.indextext p').css({
 					'height': 'initial',
 					'padding-bottom': '20px'
 				});
