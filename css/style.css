@@ -260,7 +260,7 @@ height: 25px;
  {
 	background: #fff;
 	border-radius: 0;
-	border: 1px solid rgb(154, 154, 154);
+	border: 1px solid #cccccc;
 	font-size: 13px;
 	color: rgb(154, 154, 154);
 	width: 100%;
@@ -269,11 +269,14 @@ height: 25px;
 	    display: block;
 		height: 42px;
 	line-height: 40px;
+	    border-radius: 5px;
+    font-size: 15px;
+    color: #666666;
 }
 .form-group textarea {
 	background: #fff;
 	border-radius: 0;
-	border: 1px solid rgb(154, 154, 154);
+	border: 1px solid #cccccc;
 	font-size: 13px;
 	color: rgb(154, 154, 154);
 	width: 100%;
@@ -403,7 +406,7 @@ height: 25px;
 
 @media (min-width: 768px) {
 	.modal-dialog {
-		width: 470px;
+		width: 390px;
 	}
 }
 
@@ -419,6 +422,7 @@ body.modal-open {
 .modal-content {
 	padding: 25px 30px;
 	border-radius: 0;
+	border: none;
 }
 
 .modal__form {
@@ -430,10 +434,11 @@ body.modal-open {
 }
 
 .modal-title {
-	font-size: 30px;
+	font-size: 24px;
 	color: rgb(0, 0, 0);
 	line-height: 1.2;
 	text-align: center;
+	margin-bottom: 15px;
 }
 
 .modal__form .form__textbtn {
@@ -447,18 +452,24 @@ body.modal-open {
 
 .modal__form {
     margin: 20px 0 0 0;
-    max-width: 296px;
-    margin: 20px auto;
+    max-width: 250px;
+    margin: 20px auto 0 auto;
     text-align: center;
 }
+.modal__form .btn_main {
+    width: 100%;
+	max-width: 100%;
+}
+
 .form-group {
 	display: inline-block;
 	width: 100%;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 }
 
 .form-group_last {
-	margin-bottom: 0;
+	margin-bottom: 10px;
+	margin-top: 10px;
 }
 
 input[type="text"].input-error,
@@ -501,7 +512,7 @@ input:disabled {
 	position: absolute;
 	z-index: 99;
 	right: 8px;
-	top: 8px;
+	top: 5px;
 	float: none;
 	font-size: 17px;
 	opacity: 1;
@@ -1749,11 +1760,12 @@ display: flex;
 	align-items: center;
 	justify-content: space-between;
 	margin: 30px 0;
+	flex-wrap: wrap;
 }
 
 .newslist__item {
 	width: 33.333%;
-	padding: 0 10px;
+	padding: 10px;
 	
 }
 
@@ -2189,7 +2201,176 @@ hr {
   text-transform: uppercase;
   line-height: 1.5;
   text-align: center;
-  margin: 30px 0 10px 0;
+  margin: 25px 0 10px 0;
+}
+
+
+.accordeon__title {
+	background: linear-gradient(180deg, rgba(223,218,215,1) 0%, rgba(255,255,255,1) 100%);
+	background-repeat: no-repeat;
+	transition: all 0.2s ease;
+	cursor: pointer;
+	position: relative;
+	  text-transform: uppercase;
+	padding: 10px 20px 10px 30px;
+  font-size: 18px;
+
+  color: #666;
+  font-weight: bold;
+	white-space: nowrap;
+	height: 46px;
+	line-height: 46px;
+	padding: 0 20px 0 10px;
+
+}
+.accordeon__title:after {
+	content: "";
+	position: absolute;
+	right: 20px;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	background-image: url(/images/accordeon_down.png);
+	background-position: center;
+	width: 17px;
+	height: 100%;
+	background-repeat: no-repeat;
+}
+
+.accordeon__title.active:after  {
+	content: "";
+	position: absolute;
+	right: 20px;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	background-image: url(/images/accordeon_up.png);
+	background-position: center;
+	width: 17px;
+	height: 100%;
+	background-repeat: no-repeat;
+}
+
+.accordeon__content {
+	display: none;
+	border-top: 2px solid #e5e5e5;
+	padding: 15px 0 30px 0;
+}
+
+.accordeon {
+	padding: 20px 0;
+}
+
+
+ @media (min-width: 1023px) {
+/* 	body {
+		min-height: 100vh;
+		padding-bottom: 324px;
+		position: relative;
+	}
+	
+	#footer {
+		position: absolute;
+		bottom: 0;
+		z-index: 9;
+		width: 100%;
+	} */
+	.fullpage {
+		min-height: calc(100vh - 458px);
+		padding-bottom: 50px;
+	
+	}
+	
+}
+
+ 
+ 
+ .inform__title {
+  font-size: 30px;
+  color: rgb(0, 0, 0);
+  line-height: 1;
+  text-align: center;
+	margin: 30px 0 20px 0;
+}
+
+.inform {
+	max-width: 730px;
+	margin: auto;
+	text-align: center;
+}
+
+.inform__text {
+  font-size: 18px;
+  color: rgb(0, 0, 0);
+  line-height: 1.667;
+  text-align: center;
+	margin-bottom: 15px;
+}
+.btn_large {
+  font-size: 16px;
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+  padding: 18px 33px;
+  height: initial;
+  max-width: 250px;
+  width: 100%;
+  line-height: initial;
+  color: #fff;
+}
+
+.metrolist__title {
+  font-size: 24px;
+  color: rgb(0, 0, 0);
+ padding-bottom: 5px;
+ border-bottom: 1px solid #e0e0e0;
+ margin-bottom: 10px;
+}
+
+.metrolist__item {
+	margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 30px;
+  color: rgb(0, 0, 0);
+  line-height: 1;
+  text-align: center;
+  margin: 0 0 20px 0;
+}
+
+
+.mapblock__address {
+  font-size: 15px;
+  color: rgb(29, 29, 29);
+  font-weight: bold;
+  line-height: 1.2;
+ 
+}
+
+.content p {
+  font-size: 15px;
+  color: rgb(0, 0, 0);
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+.content ul {
+ padding: 0;
+ margin: 0;
+ list-style: none;
+ margin-bottom: 20px;
+}
+.content li {
+	padding-left: 15px;
+	background-image: url(/images/list.png);
+	background-position: top 9px left;
+	background-repeat: no-repeat;
+	margin-bottom: 20px;
+	font-size: 15px;
+	 line-height: 1.4;
+}
+
+.newscontent__right {
+	padding-left: 40px;
 }
 
 
@@ -2661,6 +2842,41 @@ button.menumobile span {
 
 
 @media (max-width: 767px) {
+	.accordeon__title {
+		font-size: 12px;
+		white-space: initial;
+		padding: 10px;
+		height: initial;
+		line-height: initial;
+		padding-right: 35px;
+	}
+	.accordeon__title:after {
+		content: "";
+		position: absolute;
+		right: 10px;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+		background-image: url(/images/accordeon_down.png);
+		background-position: center;
+		width: 17px;
+		height: 100%;
+		background-repeat: no-repeat;
+	}
+
+	.accordeon__title.active:after  {
+		content: "";
+		position: absolute;
+		right: 10px;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+		background-image: url(/images/accordeon_up.png);
+		background-position: center;
+		width: 17px;
+		height: 100%;
+		background-repeat: no-repeat;
+	}
 	.pagetitle h1 {
 		font-size: 22px;
 	}
@@ -3130,6 +3346,46 @@ h2 {
 	.productitems .productitem {
 		
 	}
+	.btn_large {
+	  font-size: 15px;
+	  color: rgb(0, 0, 0);
+	  text-transform: uppercase;
+	  padding: 10px 15px;
+	  height: initial;
+	  max-width: 250px;
+	  width: 100%;
+	  line-height: initial;
+	  color: #fff;
+	}
+	.inform__text {
+		font-size: 15px;
+		line-height: 1.2;
+	}
+	.inform .imageblock {
+		max-width: 150px;
+		margin: auto;
+	}
+	.fullpage {
+		padding-bottom: 30px;
+	}
+	.inform__title {
+		font-size: 22px;
+	}
+	.modal-content {
+		padding: 15px;
+	}
+	.modal-body {
+		padding: 0;
+	}
+	.newscontent__right {
+	padding-left: 0;
+}
+.newscontent__image {
+	max-width: 370px;
+	margin: auto;
+	text-align: center;
+	padding-bottom: 30px;
+}
 }
 
 
