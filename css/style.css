@@ -165,7 +165,7 @@ height: 25px;
 	display: none;
 }
 
-.productdetail__left {
+.productdetail__image {
  	height: 405px;
 	border: 1px solid #dfdfdf;
 	
@@ -173,7 +173,7 @@ height: 25px;
 
 .productdetail__image {
 	position: relative;
-	height: 100%;
+
 }
 .productdetail__slider {
 	height: 100%;
@@ -279,7 +279,7 @@ span.params__fordots {
 	line-height: 1.2;
 }
 
-.productdetail__right {
+.productdetail__info {
 	min-height: 405px;
 	padding: 23px 20px 15px 28px;
 	border: 1px solid #dfdfdf;
@@ -933,10 +933,19 @@ input:disabled {
 	justify-content: center;
 	padding: 0 20px;
 	height: 100%;	
+	border-bottom: 3px solid #0077cc;
 	
 }
 .mainmenu nav > ul > li > a:hover {
 	background: #0064ac;
+		border-bottom: 3px solid #0064ac;
+}
+.mainmenu ul > li .fa-angle-down {
+	display: none;
+}
+.mainmenu nav > ul > li.active > a {
+	background: #0064ac;
+	border-bottom: 3px solid #db2955;
 }
 
 
@@ -2523,7 +2532,49 @@ h1 {
   margin-left: 20px;
 
 }
+.linkscatalog__items_left {
+	justify-content: flex-start;
+	margin: 0 -5px;
+}
 
+.caption {
+  font-size: 18px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+.detaillinks {
+	padding-bottom: 5px;
+}
+.productdetail__navitem {
+	width: 16.6666667%;
+	padding: 5px;
+	cursor: pointer;
+}
+
+.productdetail__navimg {
+	width: 114px;
+	max-width: 100%;
+	border: 3px solid #fff;
+	outline: 1px solid #dfdfdf !important;
+	padding: 10px;
+}
+
+.productdetail__navitems {
+	display: flex;
+	justify-content: space-between;
+	margin: -5px;
+	flex-wrap: wrap;
+	
+}
+
+.productdetail__image_type2 {
+	height: 362px;
+}
+.productdetail__navitem.slick-slide.slick-current .productdetail__navimg {
+	border: 3px solid #fdca40;
+	outline: none !important;
+}
 
 @media (max-width: 1279px) {
 	.mainmenu nav > ul > li > a {
@@ -3573,18 +3624,18 @@ h2 {
 	max-width: 140px;
 	font-size: 14px;
 }
-.productdetail__right {
+.productdetail__info {
 	margin-top: 20px;
 }
 h1 {font-size: 24px;}
-.productdetail__right {
+.productdetail__info {
 	min-height: initial;
 	padding: 15px;
 }
 .productdetail__price {
 	margin-bottom: 20px;
 }
-.productdetail__left {
+.productdetail__image {
 	height: initial;
 	padding: 20px;
 }

@@ -54,6 +54,24 @@ $(document).ready(function() {
 	}
 	
 	
+
+	   $('.productdetail__slidernav').slick({
+		  slidesToShow: 1,
+		  slidesToScroll: 1,
+		  arrows: false,		  
+		  asNavFor: '.productdetail__navitems'
+		});
+		$('.productdetail__navitems').slick({
+		  slidesToShow: 0,
+		  slidesToScroll: 1,
+		  asNavFor: '.productdetail__slidernav',
+		  dots: false,
+		  centerMode: false,
+		  focusOnSelect: true
+		});
+
+	
+	
 	
 	
 	
