@@ -35,6 +35,28 @@ $(document).ready(function() {
 	
 	}
 	
+	try {	
+	  $('.productdetail__slider').each(function() {
+		  $(this).slick({
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      /* autoplay: true,
+        autoplaySpeed: 3000,*/
+        arrows: true,
+        dots: false,
+       /* dotsClass: 'mainslider__dots_slick',*/
+	   
+    });
+	 });
+	} catch(err) {
+	
+	}
+	
+	
+	
+	
+	
 	$(".productslider__right").click(function(e) { 
 		$(this).parent().parent().find(".slick-slider").slick("slickNext"); 
 	});
@@ -42,6 +64,19 @@ $(document).ready(function() {
 		$(".productslider__left").click(function(e) { 
 		$(this).parent().parent().find(".slick-slider").slick("slickPrev"); 
 	});
+	
+	
+	
+	$(".productdetail__arrright").click(function(e) { 
+		$(this).parent().parent().find(".slick-slider").slick("slickNext"); 
+	});
+	
+		$(".productdetail__arrleft").click(function(e) { 
+		$(this).parent().parent().find(".slick-slider").slick("slickPrev"); 
+	});
+	
+	
+	
 	
 	
     $("input[type=tel]").mask("+7 (999) 999-99-99");
