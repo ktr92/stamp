@@ -160,7 +160,6 @@ $(document).ready(function() {
 });
 
 
-
 $(function() {
     $('.menumobile').click(function(event) {
         $(this).toggleClass('active');
@@ -175,6 +174,30 @@ $(function() {
 	$('.topmenumobile').click(function(event) {
         $('.topmenu').slideToggle();
     });
+	
+	
+	
+	
+	
+	$('.productdetail__showmore_show').on('click', function() {
+		
+		 $(".productdetail__navitems").animate({
+			height : $(".productdetail__navitems")[0].scrollHeight
+		},500);
+		
+		
+		$(this).toggleClass('active');
+		$('.productdetail__showmore_hide').toggleClass('active');		
+		
+	});
+	$('.productdetail__showmore_hide').on('click', function() {
+		 $(".productdetail__navitems").animate({
+			height : '374px'
+		},500);
+		
+		$(this).toggleClass('active');	
+		$('.productdetail__showmore_show').toggleClass('active');
+	});
 	
 	$('.mainmenu ul > li .fa-angle-down').click(function(e) {
 		if ($(window).width() < 1024) {
@@ -218,3 +241,36 @@ $('.quantity').on('click', '.quantity-plus', function(e) {
 $('.quantity').on('click', '.quantity-minus', function(e) {
   decrementValue(e);
 });
+
+$(document).ready( function() {
+    $(".fileupload input[type=file]").change(function()	{		
+		if (this.files[0]) {
+			var filename = $(this).val().replace(/.*\\/, ""); 
+			/* $(this).siblings('span').empty(); */
+			$(this).siblings('.filenames').find('.filenamedef').append('<span class="filename"> ' + filename + ' ' + ' </span>');
+			$('.file-error').html("");
+			$('.file-upload span').css('text-transform', 'none');
+			$('.changefile').css('display', 'block');
+		}
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
