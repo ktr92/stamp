@@ -99,7 +99,7 @@
 					
 					
 						<div class="header__menu">
-							<button class="menumobile"><img src="/images/bars3.png" alt=""> <span>Каталог продукции</span></button>	
+							<button class="menumobile"><img src="/images/bars3.png" alt=""> <span>Меню</span></button>	
 							<div class="container">
 								<div class="mainmenu">
 									<!-- <div class="closemenu"><img src="/images/closemenu.png" alt=""></div> -->
@@ -139,6 +139,16 @@
 											<li><a href="">Факсимиле</a></li>
 											<li><a href="">Оснастки для печатей</a></li>
 											<li><a href="">Расходные материалы</a></li>
+										
+											
+										</ul>
+										
+										<ul class="mobilemenu">
+											<li><a href="">О компании</a></li>
+											<li><a href="">Доставка</a></li>
+											<li><a href="">Оплата</a></li>
+											<li><a href="">Статьи</a></li>
+											<li><a href="">Контакты</a></li>
 										</ul>
 									</nav>
 								</div>
@@ -208,11 +218,12 @@
 																  <input type="button" value="+" class="quantity-plus" data-field="quantity">
 																</div>
 															</span>
+															<span class="cart__price cart__price_mobile">1 300 руб.</span>
 														</span>
 													</td>
 													<td class="cart__col3">
 														<span class="cart__td">
-															<span class="cart__price">1300 руб.</span>
+															<span class="cart__price">1 300 руб.</span>
 														</span>
 													</td>
 													<td class="cart__col4">
@@ -241,6 +252,7 @@
 																  <input type="number" step="1" max="" value="1" name="quantity" class="quantity-field">
 																  <input type="button" value="+" class="quantity-plus" data-field="quantity">
 																</div>
+																<span class="cart__price cart__price_mobile">700 руб.</span>
 															</span>
 														</span>
 													</td>
@@ -266,23 +278,159 @@
 										<div class="cart__coupon">
 											<div class="inputinside">
 												<span>Применить купон</span>
-												<input type="text">
-												<input type="submit" value="">
+												<div class="usecoupon">
+													<input type="text">
+													<input type="submit" value="">
+												</div>
 											</div>
 										</div>
-										<div class="cart__summ"><span>Итого: 2000 руб.</span></div>
+										<div class="cart__summ"><span>Итого: 2 000 руб.</span></div>
 									</div>
 								</div>
 							</div>
 							<div class="order__item">
-								<div class="cart">
-									<div class="order__title" style="background-image: url(/images/cart2.png);">Контактная информация</div>
+								<div class="order__personal">
+									<div class="order__title" style="background-image: url(/images/cart3.png);">Контактная информация</div>
+									<div class="order__group">
+										<div class="order__field">
+											<div class="order__label">Имя <sup><span class="red">*</span></sup></div>
+											<div class="order__input">
+												<input type="text">
+												
+											</div>
+											<div class="order__infotext">Напишите нам, как мы можем к Вам обращаться. Достаточно только имени.</div>
+										</div>
+										<div class="order__field">
+											<div class="order__label">Телефон <sup><span class="red">*</span></sup></div>
+											<div class="order__input">
+												<input type="tel" placeholder="+7 (___) ___-__-__">
+												
+											</div>
+											<div class="order__infotext">Укажите Ваш телефон с кодом города. Мы не отправим заказ без подтверждения по телефону.</div>
+										</div>
+										<div class="order__field">
+											<div class="order__label">E-mail</div>
+											<div class="order__input">
+												<input type="email">
+												
+											</div>
+											<div class="order__infotext">На этот адрес мы будем сообщать, что происходит с заказом. И никакого спама!.</div>
+										</div>
+										<div class="order__field">
+											<div class="order__label">Комментарии к заказу</div>
+											<div class="order__input">
+												<textarea name="" id="" rows="3"></textarea>
+												
+											</div>
+											<div class="order__infotext">Здесь Вы можете оставить дополнительные комментарии и пожедания к Вашему заказу.</div>
+										</div>
+										<div class="order__small"><sup><span class="red">*</span></sup> поля обязательные для заполнения</div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="order__item">
+								<div class="order__title" style="background-image: url(/images/cart4.png);">Выберите способ получения</div>
+								<div class="order__delivery">
+									<div class="order__left">
+									<div class="order__radios">
+										<div class="order__radio">
+											<input type="radio" name="radioname2" id="radio1" >		
+											<label for="radio1">Доставка курьером по Москве</label>
+										</div>
+										<div class="order__radio">
+											<input type="radio" name="radioname2" id="radio2">			
+											<label for="radio2">Самовывоз из офиса (<b>БЕСПЛАТНО</b>)</label>
+										</div>
+										<div class="order__radio">
+											<input type="radio" name="radioname2" id="radio3" checked>			
+											<label for="radio3">Самовывоз из пункта выдачи (СДЭК)</label>
+										</div>
+										<div class="order__radio">
+											<input type="radio" name="radioname2" id="radio4">			
+											<label for="radio4">Самовывоз из пункта выдачи (BOXBERY)</label>
+										</div>
+									</div>
+									<div class="order__group">
+										<div class="order__field">
+											<div class="order__label">Город</div>
+											<div class="order__input">
+												<input type="text" value="Реутов">
+												
+											</div>
+										</div>
+										<div class="order__field">
+											<div class="order__label">Адрес</div>
+											<div class="order__input">
+												<div class="order__select">
+												  <select>
+													<option value="0">Выберите пункт самовывоза</option>
+													<option value="1">Пункт 1</option>
+													<option value="2">Пункт 2</option>
+													<option value="3">Пункт 3</option>
+													
+												  </select>
+												</div>											
+											</div>
+										</div>
+										<div class="order__deliveryinfo">
+											<div class="order__small">Срок доставки <b>1 день</b> (рабочие дни не считая отправки)</div>
+										
+											<div class="order__small">Стоимость доставки <b>150 руб</b>.</div>
+										
+											<div class="order__infotext"><sup><span class="red">*</span></sup> Стоимость рассчитатана для стандарной посылки, весом до 2 кг.</div>
+										
+											</div></div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="order__item">
+								<div class="order__title" style="background-image: url(/images/cart5.png);">Выберите способ оплаты</div>
+								<div class="order__pay">
+								<div class="order__left">
+									<div class="order__radios">
+										<div class="order__radio">
+											<input type="radio" name="radioname3" id="radio5" checked>		
+											<label for="radio5">Наличные</label>
+										</div>
+										<div class="order__radio">
+											<input type="radio" name="radioname3" id="radio6">			
+											<label for="radio6">Банковской картой</label>
+										</div>
+										<div class="order__radio">
+											<input type="radio" name="radioname3" id="radio7" >			
+											<label for="radio7">Яндекс.Деньги</label>
+										</div>
+										<div class="order__radio">
+											<input type="radio" name="radioname3" id="radio8">			
+											<label for="radio8">Банк</label>
+										</div>
+									</div>
+									
+									<div class="order__group">
+										<div class="order__payments">
+											<div class="order__payment"><img src="/images/cart6.png" alt=""><span>Оплата наличными при получении заказа.</span></div>
+										</div>
+									</div>
+									</div>
 								</div>
 							</div>
 							
 							
-							
 						</div>
+						
+						<div class="order__total">
+							<div class="order__summ">Итого: 2 350 руб.</div>
+							<div class="order__confirm">
+								<div class="check">
+									<input type="checkbox" checked id="checkbox_3"> <label for="checkbox_3">Я согласен на обработку <a href=""> персональных данных</a></label>
+								</div>
+							</div>
+							<div class="order__submit"><input type="text" class="btn btn_main" value="Оформить заказ"></div>
+						</div>
+						
+					
 					</form>
 				</div>
 				
@@ -334,10 +482,10 @@
 								<div class="footer__text">ИП Епишин В.В.</div>
 								<div class="footer__text">ОГРН ИП: 312774621301167</div>
 								<div class="footer__socials">
-									<a href=""><img src="/images/socials1.png" alt=""></a>
-									<a href=""><img src="/images/socials2.png" alt=""></a>
-									<a href=""><img src="/images/socials3.png" alt=""></a>
-									<a href=""><img src="/images/socials4.png" alt=""></a>
+<a href="" class="footer__vk"><img src="/images/soc_icon.png" alt=""></a>
+									<a href="" class="footer__youtube"><img src="/images/soc_icon.png" alt=""></a>
+									<a href="" class="footer__tg1"><img src="/images/soc_icon.png" alt=""></a>
+									<a href="" class="footer__tg2"><img src="/images/soc_icon.png" alt=""></a>
 								</div>
 								<div class="footer__text">Москва,ул. Молодежная, д.46</div>
 								<div class="footer__text">Пн - Пт: с 9:00 до 18:00</div>
@@ -350,9 +498,7 @@
 				<div class="container">
 					<div class="footerinfo">
 						<div class="footerinfo__items">
-							<div class="footerinfo__item footerinfo__item_1">
-								<div class="footerinfo__link">© Stamp-msk.ru - изготовление печатей и штампов в Москве</div>
-							</div>
+
 							<div class="footerinfo__item footerinfo__item_2">
 								<div class="footerinfo__link"><a href="">Политика конфиденциальности</a></div>
 							</div>
@@ -393,6 +539,88 @@
             </div>
          </div>
       </div>
+	    <!-- Модальные окно - Попап с калькулятора -->
+      <div id="calcform" class="modal modal_large fade">
+         <div class="modal-dialog">
+           
+            <div class="modal-content">
+				 <button type="button" class="close" id="modal_zvonok_close" data-dismiss="modal" aria-hidden="true"><img src="/images/close.png"></button>
+               <div class="modal-body">
+                  <div class="modal__content">
+                     <div class="modal-title">Отправить заявку</div>
+                     <div class="modal__form">
+                        <form>
+                           <div class="form-group">
+                              <input type="text" name="" placeholder="ФИО">
+                           </div>
+                           <div class="form-group">
+                              <input type="tel" name="" placeholder="+7 (___) ___-__-__">
+                           </div>
+                           <div class="form-group">
+                              <input type="email" name="" placeholder="E-mail">
+                           </div>
+						   <div class="modal__params">
+						   	<div class="modal__param"><span><b>Тип услуги:</b> Новая печать по реквизитам</span></div>
+						   	<div class="modal__param"><span><b>Количество:</b> 2</span></div>
+						   	<div class="modal__param"><span><b>Оснастка:</b> Ручная - 100 руб.</span></div>
+						   	<div class="modal__param"><span><b>Срок изготовления: </b> 1 час (+100 руб.)</span></div>
+						   	<div class="modal__param"><span><b>Способ доставки:</b> До метро - 0 руб.</span></div>
+						   	<div class="modal__param"><span>Предварительный расчет заказа: <b>800 руб.</b></span></div>
+						   </div>
+						   <div class="check">
+								<input type="checkbox" id="checkbox_calc"> <label for="checkbox_calc">Согласен с <a href=""> политикой конфиденциальности</a> персональных данных</label>
+							</div>
+                           
+                           <div class="form-group form-group_last">
+                              <button class="btn btn_main" type="submit">Отправить заявку</button>
+                           </div>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+	  
+	   <!-- Модальные окно - Купить в 1 клик -->
+      <div id="oneclick" class="modal modal_large modal_click fade">
+         <div class="modal-dialog">
+           
+            <div class="modal-content">
+				 <button type="button" class="close" id="modal_zvonok_close" data-dismiss="modal" aria-hidden="true"><img src="/images/close.png"></button>
+               <div class="modal-body">
+                  <div class="modal__content">
+                     <div class="modal-title">Купить в 1 клик</div>
+                     <div class="modal__form">
+                        <form>
+                           <div class="form-group">
+								<div class="form__label">Ф.И.О <sup><span class="red">*</span></sup></div>
+                              <input type="text" name="" placeholder="">
+                           </div>
+                           <div class="form-group">
+							<div class="form__label">Телефон <sup><span class="red">*</span></sup></div>
+                              <input type="tel" name="" placeholder="+7 (___) ___-__-__">
+                           </div>
+                           <div class="form-group">
+							<div class="form__label">E-Mail </div>
+                              <input type="email" name="" placeholder="">
+                           </div>
+							
+						   <div class="check">
+								<input type="checkbox" id="checkbox_oneclick"> <label for="checkbox_oneclick">Я согласен на <a href=""> обработку персональных данных</a></label>
+							</div>
+                           
+                           <div class="form-group form-group_last">
+                              <button class="btn btn_main" type="submit">Отправить</button>
+                           </div>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+	  
       <script type="text/javascript" src="//yastatic.net/jquery/2.1.1/jquery.min.js"></script>
       <script type="text/javascript" src="/js/bootstrap.min.js"></script>
       <script type="text/javascript" src="/js/slick.min.js"></script>

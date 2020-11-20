@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	new WOW().init();
+	/* new WOW().init(); */
 	
 	try {	
 	  $('.productslider__slider').each(function() {
@@ -102,33 +102,34 @@ $(document).ready(function() {
 		if ($(window).width() < 767) {
 			
 				
-					$('.indextext').append('<span class="readmorespan">Читать далее <i class="fa fa-angle-down" aria-hidden="true"></i></span>');
-				/* 	$('.indexblock .text p').append('<span class="readmorespan_hide">РЎРєСЂС‹С‚СЊ</span>');
-					$('.readmorespan_hide').hide() */
+					$('.indextext').append('<span class="readmorespan readmorespan_show"><span>Читать далее</span> <i class="fa fa-angle-down" aria-hidden="true"></i></span>');
+					$('.indextext').append('<span class="readmorespan readmorespan_hide"><span>Скрыть текст</span></span>');
+					$('.readmorespan_hide').hide() 
 				
 		
-			$('.readmorespan').on('click', function() {
+			$('.readmorespan_show').on('click', function() {
 				$(this).siblings('.indextext p').css({
 					'height': 'initial',
-					'padding-bottom': '20px'
+					'padding-bottom': '0px'
 				});
+				$(this).siblings($('.readmorespan_hide')).show()
 				$(this).hide();
 				
 			});
-			/* $('.readmorespan_hide').on('click', function() {
-				$(this).parents('.list-of-products__item-description').css({
-					'height': '135px',
-					'padding-bottom': '0'
+			 $('.readmorespan_hide').on('click', function() {
+				$(this).siblings('.indextext p').css({
+					'height': '30px',
+					'padding-bottom': '0px'
 				});
 				$(this).hide();
-				$(this).siblings($('.readmorespan')).show()
-			}); */
+				$(this).siblings($('.readmorespan_show')).show()
+			}); 
 				};
 	
 	if ($(window).width() > 767) {
 		$(window).scroll(function() {
 			scroll = $(window).scrollTop();
-			if (scroll >= 700)  {
+			if (scroll >= 250)  {
 				$('#header').addClass('fixed');
 				$('#header.fixed .header__menu').hide();
 				
